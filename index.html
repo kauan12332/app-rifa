@@ -2,40 +2,47 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rifa Premiada</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Roleta de Cassino - Jogo de Apostas</title>
   <link rel="stylesheet" href="style/style.css" />
 </head>
 <body>
   <div class="container">
     <header>
-      <h1>🎉 Rifa Premiada</h1>
-      <p>Participe e concorra a prêmios incríveis!</p>
+      <h1>Roleta Russa 🎰</h1>
     </header>
 
     <main>
-      <section id="saldo">
-        <p>💰 Créditos: <span id="creditos">100</span></p>
-        <button onclick="ganharCreditos()">Ganhar +10 Créditos</button>
-      </section>
+      <section class="painel">
+        <p><strong>Créditos:</strong> <span id="creditos">100</span></p>
 
-      <section id="rifas">
-        <h2>Rifas Disponíveis</h2>
-        <div class="rifa">
-          <h3>Smartphone Top</h3>
-          <p>Número da sorte: <input type="number" id="numero" min="1" max="100" /></p>
-          <button onclick="participarRifa()">Participar (10 créditos)</button>
-        </div>
-      </section>
+        <label for="numero">Escolha um número (0 a 9):</label>
+        <input type="number" id="numero" min="0" max="9" />
 
-      <section id="resultado">
-        <h2>Resultado do Sorteio</h2>
-        <p id="mensagem">Nenhum sorteio realizado ainda.</p>
-      </section>
+        <label for="cor">Escolha uma cor:</label>
+        <select id="cor">
+          <option value="vermelho">🔴 Vermelho (5 a 9)</option>
+          <option value="preto">⚫ Preto (0 a 4)</option>
+          <option value="branco">⚪ Branco (apenas número 5)</option>
+        </select>
+
+        <button id="jogarBtn">🎯 Girar Roleta</button>
+        <p id="mensagem"></p>
+        <div class="roleta-area">
+
+  <div class="ponteiro">▼</div>
+  <div id="roleta-container">
+    <img id="roleta" src="imagens/roleta-2.png" alt="Roleta de Cassino">
+  </div>
+  <h2 id="resultado">Aguardando sorteio...</h2>
+ </div>
+
+    
+    </section>
     </main>
 
     <footer>
-      <p>&copy; 2025 Rifa Premiada - Desenvolvido por Kauã Andrade</p>
+      <p>Desenvolvido por Kauã Andrade - 2025</p>
     </footer>
   </div>
 
